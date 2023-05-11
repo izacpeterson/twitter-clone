@@ -18,6 +18,7 @@ export default async function Home() {
       {session ? (
         <div>
           {/* <NewPost /> */}
+          {/* @ts-expect-error Server Component */}
           <Feed />
         </div>
       ) : (
