@@ -7,7 +7,7 @@ export const metadata = {
   description: "A Twitter Clone built with Next.js and Prisma.",
 };
 
-import { FaUser, FaPlus } from "react-icons/fa";
+import { FaUser, FaPlus, FaSearch } from "react-icons/fa";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -18,9 +18,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Link href="/">
               <h1 className="text-4xl">{metadata.title}</h1>
             </Link>
-            <Link href="/account" className="p-2 text-xl">
-              <FaUser />
-            </Link>
+            <div className="flex">
+              <Link href="/userSearch" className="p-2 text-xl">
+                <FaSearch />
+              </Link>
+              <Link href="/account" className="p-2 text-xl">
+                <FaUser />
+              </Link>
+            </div>
           </header>
           {children}
           <Link href="/newPost" className="fixed bottom-0 right-0">

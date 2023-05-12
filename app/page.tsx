@@ -14,17 +14,14 @@ export default async function Home() {
   return (
     <main className="">
       {/* <Link href="/serverPage"> Protected Page </Link> */}
-
+      {/* @ts-expect-error Server Component */}
+      <Feed />
       {session ? (
-        <div>
-          {/* <NewPost /> */}
-          {/* @ts-expect-error Server Component */}
-          <Feed />
-        </div>
+        <div>{/* <NewPost /> */}</div>
       ) : (
         <div>
-          <h1> Please sign in to continue </h1>
-          <LoginButton />
+          {/* <h1> Please sign in to continue </h1>
+          <LoginButton /> */}
         </div>
       )}
     </main>
