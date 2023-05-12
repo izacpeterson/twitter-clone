@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { useSession } from "next-auth/react";
 import { redirect } from "next/navigation";
 
-export default function userSearchPage() {
+export default function UserSearchPage() {
   const { data: session } = useSession({
     required: true,
     onUnauthenticated() {
