@@ -72,11 +72,11 @@ model Post {
 }
 
 model Follow {
-  id        Int     @id @default(autoincrement())
-  follower  User    @relation("Follower", fields: [followerId], references: [id])
-  followerId String
-  following User    @relation("Following", fields: [followingId], references: [id])
-  followingId String
+  id           Int    @id @default(autoincrement())
+  follower     User   @relation("Following", fields: [followerId], references: [id])
+  followerId   String
+  following    User   @relation("Follower", fields: [followingId], references: [id])
+  followingId  String
   @@index([followerId])
   @@index([followingId])
 }
