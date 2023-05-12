@@ -26,7 +26,8 @@ export default function UserSearchPage() {
 
   async function searchUsers() {
     if (searchQuery.length > 0) {
-      let userSearch = await fetch(`http://localhost:3000/api/user/search?query=${searchQuery}`);
+      let userSearch = await fetch(`https://twutter.izac.app/api/user/search?query=${searchQuery}`);
+
       let usersJson = await userSearch.json();
       setUsers(usersJson);
     }
